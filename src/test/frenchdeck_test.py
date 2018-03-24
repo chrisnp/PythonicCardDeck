@@ -1,19 +1,19 @@
 import unittest
-from src.main.frenchdeck import *
+from main.frenchdeck import *
 
 
 class MyTestCase(unittest.TestCase):
 
     def setUp(self):
-        beer_card = ('7', 'diamonds')
-        deck = FrenchDeck()
+        self.beer_card = ('7', 'diamonds')
+        self.deck = FrenchDeck()
 
     def test_something(self):
         self.setUp()
-        self.assertEqual(beer_card.rank, '7')
-        self.assertIs(beer_card.suit, 'diamonds')
-        self.assertIsInstance(deck, FrenchDeck)
-        self.assertEquals(len(deck), 52)
+        self.assertEqual(self.beer_card.rank, '7')
+        self.assertIs(self.beer_card.suit, 'diamonds')
+        self.assertIsInstance(self.deck, FrenchDeck)
+        self.assertEquals(len(self.deck), 52)
 
     def tearDown(self):
         pass
